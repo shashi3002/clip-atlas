@@ -1,0 +1,10 @@
+{
+  "name": "clip-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Clip Atlas: a speech data quality dashboard and listening workbench that runs entirely in the browser.",
+  "scripts": {
+    "start": "npx --yes serve -l 8080 ."
+  },
+  "license": "UNLICENSED"
+}

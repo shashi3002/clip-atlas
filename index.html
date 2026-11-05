@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clip Atlas — Speech Data Quality Dashboard &amp; Listening Workbench</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/workspace-mora.css" />
+  <link rel="stylesheet" href="css/signin-tint.css" />
+</head>
+<body>
+
+  <!-- ====================================================================
+       VIEW 0: SUBTLE "MARKETSNACK"-STYLE HERO + 2-STEP ROLE & LOGIN FLOW
+       ==================================================================== -->
+  <div id="signin-screen" class="ms-outer-frame">
+    <div class="ms-stage-card" id="signin-stage">
+
+      <!-- Subtle Flowing Blue Silk Ribbon Waves Background (SVG) -->
+      <div class="ms-waves-bg" aria-hidden="true">
+        <svg viewBox="0 0 1440 800" preserveAspectRatio="none" class="ms-waves-svg">
+          <defs>
+            <linearGradient id="msWaveGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ececea" stop-opacity="0.85" />
+              <stop offset="52%" stop-color="#fde7b8" stop-opacity="0.48" />
+              <stop offset="100%" stop-color="#dededb" stop-opacity="0.85" />
+            </linearGradient>
+            <linearGradient id="msWaveGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#d0d0cd" stop-opacity="0.5" />
+              <stop offset="50%" stop-color="#fbd98a" stop-opacity="0.30" />
+              <stop offset="100%" stop-color="#bdbdb9" stop-opacity="0.42" />
+            </linearGradient>
+            <radialGradient id="msWarmSunGlow" cx="50%" cy="68%" r="46%">
+              <stop offset="0%" stop-color="#fdd985" stop-opacity="0.42" />
+              <stop offset="45%" stop-color="#f4b257" stop-opacity="0.18" />
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <!-- Subtle Warm Golden-Apricot Horizon Glow -->
+          <ellipse cx="720" cy="545" rx="640" ry="310" fill="url(#msWarmSunGlow)" />
+          <!-- Left Sweeping Perspective Ribbons -->
+          <path d="M-100,120 C220,380 480,520 720,560 C420,620 120,700 -100,800 Z" fill="url(#msWaveGrad1)" />
+          <path d="M-80,260 C260,450 520,540 720,560 C460,650 180,740 -80,820 Z" fill="url(#msWaveGrad2)" />
+          <!-- Right Sweeping Perspective Ribbons -->
+          <path d="M1540,120 C1220,380 960,520 720,560 C1020,620 1320,700 1540,800 Z" fill="url(#msWaveGrad1)" />
+          <path d="M1520,260 C1180,450 920,540 720,560 C980,650 1260,740 1520,820 Z" fill="url(#msWaveGrad2)" />
+          <!-- Radiating Fine Perspective Lines -->
+          <g stroke="#c9c9c5" stroke-width="1" opacity="0.5" fill="none">
+            <path d="M-60,180 Q420,510 720,560" />
+            <path d="M-60,310 Q440,530 720,560" />
+            <path d="M-60,440 Q460,545 720,560" />
+            <path d="M-60,580 Q480,565 720,560" />
+            <path d="M1500,180 Q1020,510 720,560" />
+            <path d="M1500,310 Q1000,530 720,560" />
+            <path d="M1500,440 Q980,545 720,560" />
+            <path d="M1500,580 Q960,565 720,560" />
+            <path d="M180,820 Q560,630 720,560" />
+            <path d="M390,820 Q620,630 720,560" />
+            <path d="M600,820 Q685,630 720,560" />
+            <path d="M840,820 Q755,630 720,560" />
+            <path d="M1050,820 Q820,630 720,560" />
+            <path d="M1260,820 Q880,630 720,560" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Subtle Minimal Top Navigation Bar -->
+      <header class="ms-navbar">
+        <div class="ms-brand">
+          <div class="ms-logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 10v3" /><path d="M6 6v11" /><path d="M10 3v18" /><path d="M14 8v7" /><path d="M18 5v13" /><path d="M22 10v3" />
+            </svg>
+          </div>
+          <span class="ms-brand-name">Clip<strong>Atlas</strong></span>
+        </div>
+
+        <nav class="ms-nav-links" aria-label="Landing Navigation">
+          <a href="#role-columns-section" id="ms-nav-roles-link">Sign In Roles</a>
+          <a href="#role-columns-section" id="clear-storage-btn" title="Reset saved browser verdicts &amp; settings">Reset Data</a>
+        </nav>
+
+        <div class="ms-nav-cta">
+          <button type="button" class="ms-primary-pill-btn" id="quick-demo-admin-btn">
+            Get Started
+          </button>
+        </div>
+      </header>
+
+      <!-- CENTERED HERO SECTION -->
+      <section class="ms-hero-center">
+        <h1 class="ms-hero-title">
+          From thousands of clips<br />
+          <span>to <em class="ms-blue-highlight">one clear signal</em></span>
+        </h1>
+        <p class="ms-hero-subtitle">
+          Clip Atlas filters multilingual speech recordings in real time to deliver only the quality signals that matter — helping your data team ship faster, with confidence.
+        </p>
+
+        <div class="ms-hero-buttons">
+          <button type="button" class="ms-primary-pill-btn ms-btn-lg" id="hero-open-login-btn">
+            Sign In to Portal
+          </button>
+          <button type="button" class="ms-secondary-pill-btn ms-btn-lg" id="hero-choose-role-btn">
+            Choose Your Role
+          </button>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           STEP 1: 4 SUBTLE "SIGN IN AS..." ROLE COLUMNS
+           (Viewer, Annotator, Reviewer, Admin — No internal user data exposed)
+           ================================================================== -->
+      <section class="ms-step1-section" id="role-columns-section">
+        <h2 class="ms-section-heading">Sign in as…</h2>
+
+        <div class="ms-role-columns-grid">
+          <!-- Column 1: Annotator -->
+          <div class="ms-role-col-card" data-choose-role="annotator" tabindex="0" role="button">
+            <div class="ms-role-col-top">
+              <span class="ms-role-dot dot-annotator"></span>
+              <span class="ms-role-tag">WORKBENCH</span>
+            </div>
+            <h3 class="ms-role-col-title">Annotator</h3>
+            <p class="ms-role-col-desc">
+              Access your personal assigned language queue, inspect waveforms, and submit Keep / Fix / Drop verdicts.
+            </p>
+            <span class="ms-role-col-action">Continue as Annotator →</span>
+          </div>
+
+          <!-- Column 3: Reviewer -->
+          <div class="ms-role-col-card" data-choose-role="reviewer" tabindex="0" role="button">
+            <div class="ms-role-col-top">
+              <span class="ms-role-dot dot-reviewer"></span>
+              <span class="ms-role-tag">QUALITY QA</span>
+            </div>
+            <h3 class="ms-role-col-title">Reviewer</h3>
+            <p class="ms-role-col-desc">
+              Audit the full batch, filter across all sources and flags, and re-judge clips in the Workbench.
+            </p>
+            <span class="ms-role-col-action">Continue as Reviewer →</span>
+          </div>
+
+          <!-- Column 4: Admin -->
+          <div class="ms-role-col-card" data-choose-role="admin" tabindex="0" role="button">
+            <div class="ms-role-col-top">
+              <span class="ms-role-dot dot-admin"></span>
+              <span class="ms-role-tag">FULL CONTROL</span>
+            </div>
+            <h3 class="ms-role-col-title">Admin</h3>
+            <p class="ms-role-col-desc">
+              Unlock team scorecards vs. Gold, Speed-vs-Accuracy diagnostics, live thresholds, and Batch Acceptance Gates.
+            </p>
+            <span class="ms-role-col-action">Continue as Admin →</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           STEP 2: SUBTLE CREDENTIAL & ROLE PROFILE SELECTOR CARD
+           (Revealed upon clicking a Role Column or "Sign In to Portal")
+           ================================================================== -->
+      <section class="ms-step2-section hidden" id="step2-credentials-section">
+        <div class="ms-login-box">
+          <div class="ms-login-box-top">
+            <button type="button" class="ms-back-link" id="back-to-roles-btn">
+              ← Back to Role Columns
+            </button>
+            <span class="role-pill role-admin" id="selected-user-role-pill">ADMIN</span>
+          </div>
+
+          <h2 class="ms-login-title" id="step2-portal-heading">Admin Portal Sign In</h2>
+          <p class="ms-login-sub" id="step2-portal-sub">
+            No password needed. Pick a role and a team member; your choice is remembered in this browser.
+          </p>
+
+          <form id="fake-login-form" class="ms-login-form" onsubmit="return false;">
+            <!-- 1. Role Dropdown (Viewer, Annotator, Reviewer, Admin) -->
+            <div class="ms-form-field">
+              <label for="login-role-dropdown">1. Access Role</label>
+              <select id="login-role-dropdown" class="ms-select-input">
+                <option value="admin">Admin — Full Console &amp; Gold Scorecard</option>
+                <option value="reviewer">Reviewer — Batch Overview &amp; Full Explorer</option>
+                <option value="annotator">Annotator — Assigned Language Queue</option>
+              </select>
+            </div>
+
+            <!-- 2. Specific Account / Team Member Dropdown (Scoped strictly to chosen role) -->
+            <div class="ms-form-field">
+              <label for="login-user-dropdown">2. Select Team Member Profile</label>
+              <select id="login-user-dropdown" class="ms-select-input">
+              </select>
+            </div>
+
+            <!-- Scoped Data Preview Strip (Only for the single chosen user) -->
+            <div class="ms-scoped-preview" id="selected-user-box">
+              <div class="user-avatar-badge" id="selected-user-avatar">KM</div>
+              <div class="ms-scoped-meta">
+                <div class="ms-scoped-name-line">
+                  <strong id="selected-user-name">Kiran M.</strong>
+                  <span class="selected-user-id" id="selected-user-id">adm_01</span>
+                  <span id="workload-counter-label" class="ms-workload-tag">100 Clips</span>
+                </div>
+                <div id="selected-user-langs" class="ms-scoped-langs">
+                  All 6 Languages (HI, BN, TA, MR, TE, OR)
+                </div>
+                <div class="permissions-Matrix-pills" id="permissions-matrix-pills" style="margin-top:6px;"></div>
+              </div>
+            </div>
+
+            <button type="submit" class="ms-primary-pill-btn ms-submit-full" id="confirm-signin-btn">
+              <span id="signin-btn-text">Sign in as Kiran M. (ADMIN)</span> →
+            </button>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       ACTIVE WORKSPACE SHELL (SCREENS 1, 2, 3, 4 AFTER SIGNING IN)
+       ==================================================================== -->
+  <div id="workspace-shell" class="workspace-shell hidden">
+    <!-- Sign-In Style Flowing Blue Silk Ribbon Waves Background Across Workspace -->
+    <div class="ms-waves-bg ws-fixed-waves-bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 800" preserveAspectRatio="none" class="ms-waves-svg">
+        <defs>
+          <linearGradient id="wsWaveGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.82" />
+            <stop offset="52%" stop-color="#fef3c7" stop-opacity="0.38" />
+            <stop offset="100%" stop-color="#bfdbfe" stop-opacity="0.88" />
+          </linearGradient>
+          <linearGradient id="wsWaveGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.52" />
+            <stop offset="50%" stop-color="#fde68a" stop-opacity="0.22" />
+            <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.44" />
+          </linearGradient>
+          <radialGradient id="wsWarmSunGlow" cx="50%" cy="68%" r="46%">
+            <stop offset="0%" stop-color="#fde28e" stop-opacity="0.34" />
+            <stop offset="45%" stop-color="#f7be63" stop-opacity="0.14" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <ellipse cx="720" cy="545" rx="640" ry="310" fill="url(#wsWarmSunGlow)" />
+        <path d="M-100,120 C220,380 480,520 720,560 C420,620 120,700 -100,800 Z" fill="url(#wsWaveGrad1)" />
+        <path d="M-80,260 C260,450 520,540 720,560 C460,650 180,740 -80,820 Z" fill="url(#wsWaveGrad2)" />
+        <path d="M1540,120 C1220,380 960,520 720,560 C1020,620 1320,700 1540,800 Z" fill="url(#wsWaveGrad1)" />
+        <path d="M1520,260 C1180,450 920,540 720,560 C980,650 1260,740 1520,820 Z" fill="url(#wsWaveGrad2)" />
+        <g stroke="#93c5fd" stroke-width="1" opacity="0.45" fill="none">
+          <path d="M-60,180 Q420,510 720,560" />
+          <path d="M-60,310 Q440,530 720,560" />
+          <path d="M-60,440 Q460,545 720,560" />
+          <path d="M-60,580 Q480,565 720,560" />
+          <path d="M1500,180 Q1020,510 720,560" />
+          <path d="M1500,310 Q1000,530 720,560" />
+          <path d="M1500,440 Q980,545 720,560" />
+          <path d="M1500,580 Q960,565 720,560" />
+          <path d="M180,820 Q560,630 720,560" />
+          <path d="M390,820 Q620,630 720,560" />
+          <path d="M600,820 Q685,630 720,560" />
+          <path d="M840,820 Q755,630 720,560" />
+          <path d="M1050,820 Q820,630 720,560" />
+          <path d="M1260,820 Q880,630 720,560" />
+        </g>
+      </svg>
+    </div>
+    <header class="workspace-navbar" role="banner">
+      <div class="ws-brand" id="ws-brand-home" title="Return to Sign-In Showcase">
+        <span class="ws-logo-dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg></span>
+        <span class="ws-brand-title">clip atlas</span>      </div>
+
+      <!-- Header Right: Quick Utilities, Theme Toggle & User Switcher -->
+      <div class="ws-user-controls">
+        <button type="button" class="ws-utility-btn" id="open-findings-btn" title="Open Executive Findings Report (FINDINGS.md)">
+          Batch Findings
+        </button>
+        <button type="button" class="ws-utility-btn" id="open-ab-compare-btn" title="A/B Side-by-Side Audio Comparison">
+          A/B Compare
+        </button>
+        <button type="button" class="ws-utility-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle Dark Mode">
+          ☾ Dark
+        </button>
+
+        <div class="ws-active-user-pill">
+          <span class="ws-user-label">User:</span>
+          <select id="header-user-switcher" class="header-user-select" aria-label="Switch active user"></select>
+          <span class="role-pill" id="header-role-badge">ADMIN</span>
+        </div>
+
+        <button type="button" class="ws-switch-screen-btn" id="open-signin-screen-btn" title="Open Sign-In User Picker">
+          Switch Account
+        </button>
+      </div>
+    </header>
+
+    <!-- Active Filter Breadcrumb Strip (Visible when filters are active) -->
+    <div id="global-filter-strip" class="global-filter-strip hidden"></div>
+
+    <!-- Sarvam Docs-Inspired 2-Column Layout: Left Tree Sidebar + Focused Subsection Stage -->
+    <div class="sarvam-workspace-layout">
+      <aside class="sarvam-docs-sidebar" id="sarvam-docs-sidebar" aria-label="Section & Subsection Navigation">
+        <!-- Populated dynamically by renderSarvamDocsNavigation() in app.js -->
+      </aside>
+
+      <div class="sarvam-main-column">
+        <!-- Subsection Breadcrumb & Quick-Switch Header -->
+        <div id="sarvam-subnav-header" class="sarvam-subnav-header"></div>
+
+        <!-- Main Dynamic Screen Container -->
+        <main class="ws-main-container" id="ws-main-container" role="main">
+          <!-- Rendered dynamically by app.js -->
+        </main>
+
+        <!-- Sarvam Docs-Style Previous / Next Subsection Pagination Footer -->
+        <footer id="sarvam-subnav-footer" class="sarvam-subnav-footer"></footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODALS & DRAWERS (SHORTCUTS, SPEAKER PROFILE, A/B COMPARE, FINDINGS)
+       ==================================================================== -->
+
+  <!-- 1. Keyboard Shortcuts Modal (?) -->
+  <div class="modal-backdrop hidden" id="shortcuts-modal" role="dialog" aria-modal="true" aria-labelledby="shortcuts-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="shortcuts-title">⌨ Listening Workbench Keyboard Shortcuts</h3>
+        <button type="button" class="modal-close-btn" id="close-shortcuts-btn" aria-label="Close">✕</button>
+      </div>
+      <div class="shortcuts-grid">
+        <div class="shortcut-item"><kbd>Space</kbd><span>Play / Pause Audio</span></div>
+        <div class="shortcut-item"><kbd>←</kbd> / <kbd>→</kbd><span>Seek Audio ±2 Seconds</span></div>
+        <div class="shortcut-item"><kbd>J</kbd> / <kbd>N</kbd><span>Previous / Next Clip in Queue</span></div>
+        <div class="shortcut-item"><kbd>K</kbd><span>Verdict: <strong>Keep</strong> Clip</span></div>
+        <div class="shortcut-item"><kbd>F</kbd><span>Verdict: <strong>Fix Transcript</strong> &amp; Focus Editor</span></div>
+        <div class="shortcut-item"><kbd>D</kbd><span>Verdict: <strong>Drop</strong> Clip</span></div>
+        <div class="shortcut-item"><kbd>1</kbd>–<kbd>6</kbd><span>Toggle issue tags (noisy … other)</span></div>
+        <div class="shortcut-item"><kbd>L</kbd><span>Toggle Loop Selected Region</span></div>
+        <div class="shortcut-item"><kbd>S</kbd><span>Toggle Waveform / FFT Spectrogram</span></div>
+        <div class="shortcut-item"><kbd>[</kbd> / <kbd>]</kbd><span>Decrease / Increase Playback Speed</span></div>
+        <div class="shortcut-item"><kbd>Enter</kbd><span>Save Verdict &amp; Advance to Next Clip</span></div>
+        <div class="shortcut-item"><kbd>?</kbd><span>Toggle This Shortcuts Overlay</span></div>
+        <div class="shortcut-item"><kbd>Esc</kbd><span>Close this overlay / leave a text field</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Speaker Profile Modal -->
+  <div class="modal-backdrop hidden" id="speaker-modal" role="dialog" aria-modal="true">
+    <div class="modal-card modal-card-wide" id="speaker-modal-content"></div>
+  </div>
+
+  <!-- 3. A/B Audio Compare Modal -->
+  <div class="modal-backdrop hidden" id="ab-compare-modal" role="dialog" aria-modal="true">
+    <div class="modal-card modal-card-wide" id="ab-compare-content"></div>
+  </div>
+
+  <!-- 4. Executive Batch Findings Modal (In-App Interactive FINDINGS.md) -->
+  <div class="modal-backdrop hidden" id="findings-modal" role="dialog" aria-modal="true">
+    <div class="modal-card modal-card-xl" id="findings-modal-content"></div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="atlas-toast" class="atlas-toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

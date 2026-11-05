@@ -1,0 +1,294 @@
+[
+ {
+  "clip_id": "clp_0001",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0002",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0003",
+  "expert_verdict": "keep",
+  "expert_tags": [
+   "noisy",
+   "clipped"
+  ]
+ },
+ {
+  "clip_id": "clp_0005",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0010",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0011",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0012",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0013",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0017",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "wrong_language"
+  ]
+ },
+ {
+  "clip_id": "clp_0019",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0020",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "truncated",
+   "noisy",
+   "clipped"
+  ]
+ },
+ {
+  "clip_id": "clp_0022",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0023",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "truncated"
+  ]
+ },
+ {
+  "clip_id": "clp_0024",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0028",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0029",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "truncated",
+   "noisy",
+   "clipped"
+  ]
+ },
+ {
+  "clip_id": "clp_0030",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0031",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "clipped"
+  ]
+ },
+ {
+  "clip_id": "clp_0033",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0038",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "wrong_transcript",
+   "clipped"
+  ]
+ },
+ {
+  "clip_id": "clp_0041",
+  "expert_verdict": "fix",
+  "expert_tags": [
+   "wrong_transcript"
+  ]
+ },
+ {
+  "clip_id": "clp_0042",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "truncated"
+  ]
+ },
+ {
+  "clip_id": "clp_0044",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0049",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "clipped"
+  ]
+ },
+ {
+  "clip_id": "clp_0054",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0058",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "wrong_language"
+  ]
+ },
+ {
+  "clip_id": "clp_0059",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0060",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "wrong_language"
+  ]
+ },
+ {
+  "clip_id": "clp_0062",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0065",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0066",
+  "expert_verdict": "fix",
+  "expert_tags": [
+   "wrong_transcript"
+  ]
+ },
+ {
+  "clip_id": "clp_0069",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0072",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0073",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0074",
+  "expert_verdict": "drop",
+  "expert_tags": [
+   "truncated"
+  ]
+ },
+ {
+  "clip_id": "clp_0076",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0077",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0080",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0086",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0087",
+  "expert_verdict": "fix",
+  "expert_tags": [
+   "wrong_transcript"
+  ]
+ },
+ {
+  "clip_id": "clp_0088",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0089",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0090",
+  "expert_verdict": "fix",
+  "expert_tags": [
+   "wrong_transcript"
+  ]
+ },
+ {
+  "clip_id": "clp_0092",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0094",
+  "expert_verdict": "fix",
+  "expert_tags": [
+   "wrong_transcript"
+  ]
+ },
+ {
+  "clip_id": "clp_0095",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0096",
+  "expert_verdict": "fix",
+  "expert_tags": [
+   "wrong_transcript"
+  ]
+ },
+ {
+  "clip_id": "clp_0097",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0098",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ },
+ {
+  "clip_id": "clp_0100",
+  "expert_verdict": "keep",
+  "expert_tags": []
+ }
+]

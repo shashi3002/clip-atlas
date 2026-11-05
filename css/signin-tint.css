@@ -1,0 +1,194 @@
+/* ============================================================================
+   CLIP ATLAS — SIGN-IN TINT
+   Keeps the sign-in layout exactly as designed, but swaps the blue accents for
+   graphite / neutral greys (to match the Mora-style workspace) and lifts the
+   warm apricot glow very slightly.
+   Scoped to #signin-screen only.
+   ============================================================================ */
+
+#signin-screen {
+  --si-ink: #1c1c1f;
+  --si-ink-hover: #000000;
+  --si-muted-accent: #8e8e93;
+  --si-line: #e4e4e2;
+}
+
+/* Page + stage backgrounds: blue sky -> soft neutral, warm glow a touch stronger */
+#signin-screen.ms-outer-frame {
+  background:
+    radial-gradient(circle at 50% 60%, rgba(253, 220, 132, 0.40) 0%, rgba(243, 172, 76, 0.18) 38%, transparent 72%),
+    linear-gradient(180deg, #f1f1ef 0%, #fcf6ea 52%, #ebebe8 100%);
+}
+
+#signin-screen .ms-stage-card {
+  background:
+    radial-gradient(ellipse 75% 55% at 50% 66%, rgba(253, 220, 132, 0.40) 0%, rgba(243, 172, 76, 0.145) 46%, rgba(255, 255, 255, 0) 78%),
+    linear-gradient(180deg, #ffffff 0%, #fffaf1 54%, #f8f8f7 100%);
+  box-shadow:
+    0 24px 70px rgba(17, 17, 17, 0.07),
+    0 2px 12px rgba(17, 17, 17, 0.035);
+}
+
+/* Logo, buttons, links: blue -> graphite */
+#signin-screen .ms-logo-icon {
+  background: var(--si-ink);
+  box-shadow: 0 4px 12px rgba(17, 17, 17, 0.18);
+}
+
+#signin-screen .ms-nav-links a:hover,
+#signin-screen .ms-back-link:hover {
+  color: var(--si-ink);
+}
+
+#signin-screen .ms-primary-pill-btn {
+  background: var(--si-ink);
+  box-shadow: 0 6px 18px rgba(17, 17, 17, 0.16);
+}
+
+#signin-screen .ms-primary-pill-btn:hover {
+  background: var(--si-ink-hover);
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.22);
+}
+
+#signin-screen .ms-secondary-pill-btn {
+  border-color: var(--si-line);
+  color: var(--si-ink);
+}
+
+#signin-screen .ms-secondary-pill-btn:hover {
+  border-color: #d4d4d2;
+  background: #fafaf9;
+}
+
+#signin-screen .ms-blue-highlight {
+  color: var(--si-muted-accent);
+}
+
+#signin-screen .ms-section-eyebrow {
+  color: var(--si-muted-accent);
+}
+
+/* Role cards: the three roles from users.json */
+#signin-screen .ms-step1-section {
+  max-width: 820px;
+}
+
+#signin-screen .ms-role-columns-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 760px) {
+  #signin-screen .ms-role-columns-grid {
+    grid-template-columns: 1fr;
+  }
+}
+#signin-screen .ms-role-col-card {
+  border-color: var(--si-line);
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.035);
+}
+
+#signin-screen .ms-role-col-card:hover {
+  border-color: #cfcfcc;
+  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.08);
+}
+
+#signin-screen .ms-role-col-action {
+  color: var(--si-ink);
+}
+
+#signin-screen .ms-role-tag {
+  color: #85858a;
+  background: #f3f3f1;
+}
+
+#signin-screen .ms-hero-subtitle,
+#signin-screen .ms-role-col-desc,
+#signin-screen .ms-login-sub {
+  color: #77777c;
+}
+
+#signin-screen .dot-viewer { background: #b4b4b8; }
+#signin-screen .dot-annotator { background: #d4a055; }
+#signin-screen .dot-reviewer { background: #71717a; }
+#signin-screen .dot-admin { background: var(--si-ink); }
+
+/* Step 2 credentials card */
+#signin-screen .ms-login-box {
+  border-color: var(--si-line);
+  box-shadow: 0 20px 50px rgba(17, 17, 17, 0.07);
+}
+
+#signin-screen .ms-workload-tag {
+  color: var(--si-ink);
+  background: #f2f2f1;
+}
+
+#signin-screen .ms-scoped-preview {
+  background: #fafaf9;
+  border-color: var(--si-line);
+}
+
+#signin-screen .user-avatar-badge,
+#signin-screen .avatar-admin,
+#signin-screen .avatar-reviewer,
+#signin-screen .avatar-annotator {
+  background: var(--si-ink);
+  color: #ffffff;
+}
+
+#signin-screen .role-pill,
+#signin-screen .role-admin,
+#signin-screen .role-reviewer,
+#signin-screen .role-annotator {
+  background: #f2f2f1;
+  color: #3b3b3d;
+  border: 1px solid var(--si-line);
+}
+
+#signin-screen .perm-allowed {
+  background: #f2f2f1;
+  color: #2b2b2e;
+  border-color: var(--si-line);
+}
+
+#signin-screen button:focus-visible,
+#signin-screen select:focus-visible,
+#signin-screen input:focus-visible {
+  outline-color: var(--si-ink);
+}
+
+#signin-screen .ms-select-input:focus,
+#signin-screen .ms-text-input:focus {
+  border-color: var(--si-ink);
+  outline: none;
+}
+
+/* Dark theme sign-in: navy -> neutral charcoal */
+html[data-theme="dark"] #signin-screen.ms-outer-frame {
+  background: #0d0d0e;
+}
+
+html[data-theme="dark"] #signin-screen .ms-stage-card {
+  background:
+    radial-gradient(ellipse 75% 55% at 50% 66%, rgba(212, 160, 85, 0.16) 0%, rgba(212, 160, 85, 0.05) 46%, transparent 78%),
+    #151516;
+  border-color: #262629;
+}
+
+html[data-theme="dark"] #signin-screen .ms-role-col-card,
+html[data-theme="dark"] #signin-screen .ms-login-box,
+html[data-theme="dark"] #signin-screen .ms-scoped-preview {
+  background: #1b1b1d;
+  border-color: #2c2c30;
+}
+
+html[data-theme="dark"] #signin-screen .ms-primary-pill-btn,
+html[data-theme="dark"] #signin-screen .ms-logo-icon,
+html[data-theme="dark"] #signin-screen .user-avatar-badge {
+  background: #f4f4f5;
+  color: #111111;
+}
+
+html[data-theme="dark"] #signin-screen .ms-role-col-action {
+  color: #f4f4f5;
+}

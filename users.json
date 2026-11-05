@@ -1,0 +1,91 @@
+[
+ {
+  "id": "ann_01",
+  "name": "Asha R.",
+  "role": "annotator",
+  "languages": [
+   "hi",
+   "mr"
+  ]
+ },
+ {
+  "id": "ann_02",
+  "name": "Vikram S.",
+  "role": "annotator",
+  "languages": [
+   "ta",
+   "te"
+  ]
+ },
+ {
+  "id": "ann_03",
+  "name": "Meera K.",
+  "role": "annotator",
+  "languages": [
+   "hi",
+   "mr",
+   "bn"
+  ]
+ },
+ {
+  "id": "ann_04",
+  "name": "Arjun P.",
+  "role": "annotator",
+  "languages": [
+   "bn",
+   "or"
+  ]
+ },
+ {
+  "id": "ann_05",
+  "name": "Lakshmi N.",
+  "role": "annotator",
+  "languages": [
+   "te",
+   "ta",
+   "or"
+  ]
+ },
+ {
+  "id": "ann_06",
+  "name": "Rohan D.",
+  "role": "annotator",
+  "languages": [
+   "hi",
+   "bn",
+   "ta"
+  ]
+ },
+ {
+  "id": "rev_01",
+  "name": "Kavya M.",
+  "role": "reviewer",
+  "languages": [
+   "hi",
+   "mr",
+   "bn"
+  ]
+ },
+ {
+  "id": "rev_02",
+  "name": "Imran A.",
+  "role": "reviewer",
+  "languages": [
+   "ta",
+   "te",
+   "or"
+  ]
+ },
+ {
+  "id": "adm_01",
+  "name": "Kiran M.",
+  "role": "admin",
+  "languages": []
+ },
+ {
+  "id": "adm_02",
+  "name": "Farah Q.",
+  "role": "admin",
+  "languages": []
+ }
+]
